@@ -1,0 +1,101 @@
+body {
+  font-family: "Grape Nuts", cursive;
+  background-color: #de69698c;
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  /* background-image: url(1.jpg); */
+  background-size: cover;
+        background-position: center;
+  text-align: center;
+  padding: 4em 1em;
+}
+p {
+  height: 200px;
+  width: 500px;
+  margin: 100px auto;
+  position: relative;
+}
+
+img {
+  height: 100px;
+  position: absolute;
+  left: 0;
+  offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
+  box-shadow: 1px 1px 3px #0008;
+  transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84),box-shadow .3s, z-index .3s;
+  z-index: 0;
+}
+
+img:hover {
+  transform: scale(3);
+  /* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
+  offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
+  box-shadow: 3px 4px 10px #0006;
+  z-index: 999;
+}
+
+/* 3 images */
+img:nth-last-child(3):first-child {
+  offset-distance: 17%;
+}
+img:nth-last-child(2):nth-child(2) {
+  offset-distance: 49%;
+}
+img:last-child:nth-child(3) {
+  offset-distance: 81%;
+}
+
+/* 4 images */
+img:nth-last-child(4):first-child {
+  offset-distance: 10%;
+}
+img:nth-last-child(3):nth-child(2) {
+  offset-distance: 35%;
+}
+img:nth-last-child(2):nth-child(3) {
+  offset-distance: 65%;
+}
+img:last-child:nth-child(4) {
+  offset-distance: 90%;
+}
+
+/* 5 images */
+img:nth-last-child(5):first-child {
+  offset-distance: 0%;
+}
+img:nth-last-child(4):nth-child(2) {
+  offset-distance: 25%;
+}
+img:nth-last-child(3):nth-child(3) {
+  offset-distance: 51%;
+}
+img:nth-last-child(2):nth-child(4) {
+  offset-distance: 75%;
+}
+img:last-child:nth-child(5) {
+  offset-distance: 100%;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #f9748f;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  background-color: #B1D4E0;
+  border-radius: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+audio::-webkit-media-controls-play-button:hover {
+  background-color: rgba(177,212,224, .7);
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  color: #fff;
+}
+
+audio::-webkit-media-controls-current-time-display {
+  color: #fff;
+}
+audio::-webkit-media-controls-play-button:hover {
+background-color: rgba(224, 177, 177, 0.7);
+}
